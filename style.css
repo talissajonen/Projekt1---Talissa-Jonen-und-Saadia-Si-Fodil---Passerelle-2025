@@ -1,0 +1,150 @@
+/* Colors: we inspired ourselves in the Bern Kanton colors */
+:root {
+    --color-one: #E30613;   
+    --color-two: #FFD700;   
+    --color-three: #000000; 
+    --color-four: #FFFFFF;  
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Main Photo of our Site - Bern Background Photo*/
+.main-image {
+    position: fixed;
+    top: 0; 
+    left: 0; 
+    width: 100%;
+    height: 100%;
+    background-image: url(background.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /*Ask about how to roll a page with a link*/
+    z-index: -1; 
+    filter: brightness(70%);
+
+}
+
+/* Menu */
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 50px;
+    position: relative; 
+    background: transparent; 
+}
+/* Menu Logo*/
+.logo img {
+    max-height: 50px; 
+    width: auto;
+}
+/* Menu Nav Links*/
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--color-four);
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--color-two);
+}
+/* Menu Language Links*/
+.lang-links {
+    display: flex;
+    gap: 10px;
+}
+
+.lang-links a {
+    text-decoration: none;
+    color: var(--color-four);
+    font-weight: bold;
+}
+
+.lang-links a:hover {
+    color: var(--color-two);
+}
+/* Main Page - Center Area*/
+.center-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    text-align: center;
+    color: var(--color-four); 
+}
+
+.center-text .subtitle {
+    font-size: 2rem;
+    margin: 0 0 10px 0;
+}
+
+.center-text .title {
+    font-size: 10rem; 
+    margin: 0 0 10px 0;
+    font-weight: bold;
+}
+
+.center-text .subtitle-two {
+    font-size: 2rem;
+    margin: 0 0 20px 0;
+}
+/* Main Page - Button*/
+.center-text .btn {
+    display: inline-block;
+    padding: 10px 25px;
+    font-size: 1.5rem;
+    background-color: var(--color-one); 
+    color: var(--color-four); 
+    text-decoration: none;
+    border-radius: 8px; 
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+/* Main Page - Button Hover*/
+.center-text .btn:hover {
+    background-color: var(--color-two); 
+    color: var(--color-three); 
+}
+
+/* Menu for Pages With Content */
+.second-menu {
+    background-color: var(--color-three); 
+}
+/* Language Page Content */
+.page-content {
+    max-width: 1200px;     
+    margin: 120px auto 50px auto; 
+    padding: 0 10px;       
+    background-color: var(--color-four); 
+    color: var(--color-three); 
+    line-height: 1.7;      
+}
+
+.page-content h1 {
+    font-size: 3rem;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.page-content h2 {
+    font-size: 1.8rem;
+    margin-bottom: 5px;
+    text-align: center;
+    font-weight: normal;
+}
+
+.page-content p {
+    font-size: 1rem;
+    margin-bottom: 5px;
+    text-align: justify;
+}
+
