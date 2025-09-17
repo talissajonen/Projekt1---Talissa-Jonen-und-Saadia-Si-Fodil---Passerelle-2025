@@ -91,6 +91,13 @@ body {
     font-size: 10rem; 
     margin: 0 0 10px 0;
     font-weight: bold;
+    transition: transform 0.6s; 
+
+}
+
+.center-text .title:hover {
+  transform: scale(1.2);  
+
 }
 
 .center-text .subtitle-two {
@@ -122,8 +129,8 @@ body {
 /* Language Page Content */
 .page-content {
     max-width: 1200px;     
-    margin: 120px auto 50px auto; 
-    padding: 0 10px;       
+    margin: 80px auto 50px auto; 
+    padding: 0 5px;       
     background-color: var(--color-four); 
     color: var(--color-three); 
     line-height: 1.7;      
@@ -136,8 +143,8 @@ body {
 }
 
 .page-content h2 {
-    font-size: 1.8rem;
-    margin-bottom: 5px;
+    font-size: 1rem;
+    margin-bottom: 50px;
     text-align: center;
     font-weight: normal;
 }
