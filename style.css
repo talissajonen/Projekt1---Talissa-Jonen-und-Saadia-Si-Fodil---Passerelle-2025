@@ -27,6 +27,18 @@ body {
 
 }
 
+.footer {
+    position: absolute;
+    bottom: 0;
+    left: 35%;
+    max-width:100%; 
+    margin-top:auto; 
+    color: var(--color-four); 
+    padding: 1rem 0; 
+    text-align:center;
+    z-index: 1;
+}
+
 /* Menu */
 .menu {
     display: flex;
@@ -104,6 +116,8 @@ body {
     font-size: 2rem;
     margin: 0 0 20px 0;
 }
+
+
 /* Main Page - Button*/
 .center-text .btn {
     display: inline-block;
@@ -130,7 +144,7 @@ body {
 .page-content {
     max-width: 1200px;     
     margin: 80px auto 50px auto; 
-    padding: 0 5px;       
+    padding: 0 5rem;       
     background-color: var(--color-four); 
     color: var(--color-three); 
     line-height: 1.7;      
@@ -141,7 +155,10 @@ body {
     margin-bottom: 5px;
     text-align: center;
 }
-
+.faq-item
+{
+    padding-left: 2rem;
+}
 .page-content h2 {
     font-size: 1rem;
     margin-bottom: 50px;
@@ -158,35 +175,77 @@ body {
 /* bevelkurung und geographie pages */
 .faq-hero {
     text-align: center;
-    padding: 4rem 1rem;
+    padding: 2rem 1rem;
 }
 
 .faq-hero h1 {
     font-size: 2.5rem;
     font-weight: 700;
-    color: red;
+    color:#000000;
 }
+ .stat-item {
+             Centre le texte du premier item */
+            text-align: center;
+            flex:1;
+        }
 
 .faq-hero p {
+    flex:1
     color: #666;
     font-size: 1rem;
 }
+    
 
 .content-container {
     display: flex;
-    justify-content: center;
-    gap: 5%;
     max-width: 1100px;
-    margin: 0 auto;
-    padding: 2rem 1rem;
+    margin: 0px;
+    padding: 0 5rem;
 }
-
+.back-to-top{
+    float: right;
+    text-decoration: none;
+    margin-right: 2rem;
+    padding:0 1rem;
+    font-size: 2rem;
+    border-radius: 2rem;
+    background-color: rgb(223, 9, 9);
+    text-align: center;
+}
 .stats-section {
     flex: 1;
     display: flex;
     flex-direction: column;
-    gap: 30px;
-    padding: 15px;
+    //*gap: 30px;
+    padding: 15px;*//
+}
+.Line {
+            /* Active le conteneur Flexbox */
+            display: flex; 
+            
+            /* Align les éléments horizontalement avec de l'espace entre eux */
+            justify-content: space-between; 
+            
+            /* Centre les éléments verticalement */
+            align-items: center; 
+            
+            /* Ajoute un espace entre les boîtes */
+            gap: 20px; 
+            
+            /* Style pour un meilleur rendu visuel */
+            
+            padding: 5px;
+            margin-bottom: 5px;
+            border-radius: 8px;
+        }
+p {
+   text-align: center; 
+}
+/* Styles for screens 768px and wider */
+@media (min-width: 768px) {
+  .container {
+    flex-direction: row;
+  }
 }
 
 
