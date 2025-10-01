@@ -4,6 +4,37 @@
     <meta charset="UTF-8">
      <link rel="stylesheet" href="style.css">
     <title>Geographie de Bern</title>
+   <script>
+        document.addEventListener('DOMContentLoaded', function() {
+  const element = document.getElementById('textToModify');
+  
+  // Check if the element was found
+  if (element) {
+    const wordToLink = "Bern";
+    const url = "https://fr.wikipedia.org/wiki/Berne"; // The destination link (e.g., Wikipedia)
+    
+    // 1. Create the HTML for the hyperlink
+    // target="_blank" opens the link in a new browser tab/window.
+    const linkHTML = `<a href="${url}" target="_blank">${wordToLink}</a>`;
+    
+    // 2. Use a Regular Expression for precise replacement
+    //    - 'g' (global): Replaces ALL occurrences in the text.
+    //    - 'i' (case-insensitive): Matches "Bern", "bern", "BERN", etc.
+    //    - \\b : Represents a word boundary (ensures we don't match 'Berner' in 'Berner Alpen')
+    const regex = new RegExp(`\\b${wordToLink}\\b`, 'gi');
+    
+    // 3. Get the text and replace the word with the link HTML
+    // We use innerHTML to access and modify the text while preserving its formatting.
+    const newHTML = element.innerHTML.replace(regex, linkHTML);
+    
+    // 4. Update the element's content with the new HTML
+    element.innerHTML = newHTML;
+  } else {
+    console.error("The element with ID 'textToModify' was not found.");
+  }
+});
+    </script>
+
     
 </head>
 <body>
@@ -42,12 +73,12 @@
             </div>
             <div class="faq-item">
                 <h3 style="color: black;">Geographie</h3>
-                 <p>Berne se situe sur le plateau suisse, dans le canton de Berne, un peu à l'ouest du centre de la Suisse et à 20 km au nord des Alpes bernoises. Le paysage autour de Berne a été formé par des glaciers au cours de la dernière glaciation. Les deux montagnes les plus proches de Berne sont le Gurten avec une hauteur de 858 mètres et le Bantiger avec une hauteur de 947 mètres. Le site de l'ancien observatoire astronomique de Berne est le point d'origine du système de coordonnées suisse CH1903, et se trouve à 46° 57′ 03,9″ N, 7° 26′ 19,1″ E (46°57′08.66″N 7°26′22.50″E en coordonnées ellipsoïdales CH1903).</p>
+                 <p id="textToModify">Bern se situe sur le plateau suisse, dans le canton de Bern, un peu à l'ouest du centre de la Suisse et à 20 km au nord des Alpes bernoises. Le paysage autour de Berne a été formé par des glaciers au cours de la dernière glaciation. Les deux montagnes les plus proches de Berne sont le Gurten avec une hauteur de 858 mètres et le Bantiger avec une hauteur de 947 mètres. Le site de l'ancien observatoire astronomique de Berne est le point d'origine du système de coordonnées suisse CH1903, et se trouve à 46° 57′ 03,9″ N, 7° 26′ 19,1″ E (46°57′08.66″N 7°26′22.50″E en coordonnées ellipsoïdales CH1903).</p>
                     <p>La ville a été bâtie à l’origine sur une péninsule formée par un méandre de l’Aar mais ne dépassera ces frontières naturelles qu’au cours du XIXe siècle, un certain nombre de ponts ayant été construits pour permettre à la ville de se développer au-delà de la rivière.
 
-Berne est construite sur un sol très inégal. Il existe plusieurs dizaines de mètres de hauteur de différence entre les quartiers près de l'Aar (Matte, Marzili) et les plus élevés (Kirchenfeld, Länggasse).
+Bern est construite sur un sol très inégal. Il existe plusieurs dizaines de mètres de hauteur de différence entre les quartiers près de l'Aar (Matte, Marzili) et les plus élevés (Kirchenfeld, Länggasse).
 
-Berne a une superficie de 51,6 km2. De cette superficie, 20,2 % sont utilisés à des fins agricoles, tandis que 33,5 % sont des forêts. Sur le reste de la zone, 44,2 % sont habités (bâtiments ou routes) et le reste (2,1 %) fait partie des régions non-productives (rivières ou glaciers)[9].</p>
+Bern a une superficie de 51,6 km2. De cette superficie, 20,2 % sont utilisés à des fins agricoles, tandis que 33,5 % sont des forêts. Sur le reste de la zone, 44,2 % sont habités (bâtiments ou routes) et le reste (2,1 %) fait partie des régions non-productives (rivières ou glaciers)[9].</p>
                 </div>
             </div>
         </div>
