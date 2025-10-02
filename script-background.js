@@ -1,6 +1,10 @@
 const backgrounds = [
   "img/background2.jpg",
-  "img/background3.jpg"
+  "img/background3.jpg",
+  "img/background4.jpg",
+  "img/background5.jpg",
+  "img/background6.jpg",
+  "img/background7.jpg"
 ];
 
 let current = 0;
